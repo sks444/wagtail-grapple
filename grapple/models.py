@@ -26,7 +26,7 @@ class GraphQLField:
         self.extract_key = kwargs.get("key", None)
         is_list = kwargs.get("is_list", False)
         if is_list:
-            self.field_type = graphene.List(field_type)
+            self.field_type = graphene.List(self.field_type)
 
 
 def GraphQLString(field_name: str, **kwargs):
