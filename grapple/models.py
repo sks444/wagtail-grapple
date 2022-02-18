@@ -130,6 +130,15 @@ def GraphQLDocument(field_name: str, **kwargs):
     return Mixin
 
 
+def GraphQLSvg(field_name: str, **kwargs):
+    def Mixin():
+        from .types.svgs import get_svg_type
+
+        return GraphQLField(field_name, get_svg_type, **kwargs)
+
+    return Mixin
+
+
 def GraphQLPage(field_name: str, **kwargs):
     def Mixin():
         from .types.pages import PageInterface

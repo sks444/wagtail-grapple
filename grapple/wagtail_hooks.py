@@ -17,6 +17,7 @@ from .types.settings import SettingsQuery
 from .types.sites import SitesQuery
 from .types.snippets import SnippetsQuery
 from .types.tags import TagsQuery
+from .types.svgs import SvgsQuery
 
 
 @hooks.register("register_schema_query")
@@ -27,6 +28,7 @@ def register_schema_query(query_mixins):
         SitesQuery(),
         ImagesQuery(),
         DocumentsQuery(),
+        SvgsQuery(),
         SnippetsQuery(),
         SettingsQuery(),
         SearchQuery(),

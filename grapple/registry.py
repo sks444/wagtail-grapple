@@ -8,6 +8,7 @@ class Registry:
     apps = []
     pages = RegistryItem()
     documents = RegistryItem()
+    svgs = RegistryItem()
     images = RegistryItem()
     media = RegistryItem()
     collections = RegistryItem()
@@ -21,6 +22,7 @@ class Registry:
     lazy_types = (
         "pages",
         "documents",
+        "svgs",
         "images",
         "media",
         "collections",
@@ -37,6 +39,7 @@ class Registry:
         models: dict = {}
         models.update(self.pages)
         models.update(self.documents)
+        models.update(self.svgs)
         models.update(self.images)
         models.update(self.collections)
         models.update(self.snippets)
@@ -49,6 +52,7 @@ class Registry:
         models: dict = {}
         models.update(self.pages)
         models.update(self.documents)
+        models.update(self.svgs)
         models.update(self.images)
         models.update(self.collections)
         models.update(self.snippets)
